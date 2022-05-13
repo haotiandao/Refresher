@@ -20,8 +20,8 @@ def Open_Tasks(url:str,nums:int):
     times = 0
     while True:
         driver.get(url)
-        os.system('echo "driver.title"')
-        time.sleep(random.randint(Config['Random_Durations']))
+        os.system(f'echo "{driver.title}"')
+        time.sleep(random.randint(Config['Random_Durations'][0],Config['Random_Durations'][1]))
         driver.refresh()
         os.system(f'echo "{time.time()-Start_Time} : Process {nums} for {url} has Refershed {times} times"')
         times+=1
