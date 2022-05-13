@@ -28,5 +28,5 @@ def Open_Tasks(url:str,nums:int):
 
 if __name__ == '__main__':
     for i in Config["Urls"]:
-        for n in Config["Process_Nums"]:
+        for n in range(Config["Process_Nums"]):
             multiprocessing.Process(target=Open_Tasks,args=(i,n,)).start()
