@@ -21,6 +21,7 @@ def Open_Tasks(url:str,nums:int):
     while True:
         times+=1
         driver.get(url)
+        time.sleep(3)
         os.system(f'echo "{time.time()-Start_Time} : Processs {nums} for {url} has opened! {driver.title}"')
         time.sleep(random.randint(Config['Random_Durations'][0],Config['Random_Durations'][1]))
         driver.refresh()
