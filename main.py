@@ -19,7 +19,8 @@ def Open_Tasks(url:str,nums:int):
     driver = webdriver.Chrome(chrome_options = chrome_options)
     times = 0
     while True:
-        assert driver.get(url) != None , os.system('echo    "Error in opening {url}"')
+        driver.get(url)
+        os.system('echo "driver.title"')
         time.sleep(random.randint(Config['Random_Durations']))
         driver.refresh()
         os.system(f'echo "{time.time()-Start_Time} : Process {nums} for {url} has Refershed {times} times"')
