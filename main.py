@@ -6,7 +6,7 @@ import os
 import random
 import time
 Start_Time = time.time()
-Config = json.loads(open("./config.json","r",encoding="utf-8").read())
+Config = json.loads(open("./Config.json","r",encoding="utf-8").read())
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
