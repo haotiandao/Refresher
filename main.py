@@ -19,12 +19,12 @@ def Open_Tasks(url:str,nums:int):
     driver = webdriver.Chrome(chrome_options = chrome_options)
     times = 0
     while True:
+        times+=1
         driver.get(url)
-        os.system(f'echo "{driver.title}"')
+        os.system(f'echo "{time.time()-Start_Time} : Processs {nums} for {url} has opened! {driver.title}"')
         time.sleep(random.randint(Config['Random_Durations'][0],Config['Random_Durations'][1]))
         driver.refresh()
         os.system(f'echo "{time.time()-Start_Time} : Process {nums} for {url} has Refershed {times} times"')
-        times+=1
         time.sleep(1)
 
 if __name__ == '__main__':
